@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conversor.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+
+    <div class="logo">
+        <a href="index.html"><img
+                src="https://previews.123rf.com/images/konstantinks/konstantinks1403/konstantinks140300512/26874782-home-button-on-white-background.jpg"
+                alt="Logo da Imersão Dev" /></a>
+    </div>
+
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <form class="converter-form" id="converter-Form">
+
+            <div class="currency-row">
+
+                <div class="currency-input">
+
+                    <label>Valor</label>
+                    <input type="number" id="amount" placeholder="Digite o valor aqui." step="0.1" min="0" required>
+
+                </div>
+
+                <div class="currency-select">
+
+                    <label for="fromCurrency">De</label>
+                    <select id="fromCurrency" required>
+                        <option value="USD">USD - Dólar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="BRL" selected>BRL - Real</option>
+                        <option value="GBP">GBP - Libra</option>
+                        <option value="JPY">JPY - Iene</option>
+                        <option value="CNY">CNY - Yuan</option>
+                        <option value="KRW">KRW - Won</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="currency-row">
+
+                <div class="currency-input">
+
+                    <label>Resultado</label>
+                    <input type="text" readonly id="convertedAmount" placeholder="Valor convertido.">
+
+                </div>
+
+                <div class="currency-select">
+
+                    <label for="toCurrency">De</label>
+                    <select id="toCurrency" required>
+                        <option value="USD">USD - Dólar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="BRL">BRL - Real</option>
+                        <option value="GBP">GBP - Libra</option>
+                        <option value="JPY">JPY - Iene</option>
+                        <option value="CNY">CNY - Yuan</option>
+                        <option value="KRW" selected>KRW - Won</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="converter-btn" id="converter-Btn">Converter Moeda</button>
+
+        </form>
+
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Buscando cotação...</p>
+        </div>
+
+        <div class="result"></div>
+        <div class="error"></div>
+
+        <div class="info">
+            <p>Taxas atualizadas em tempo real.</p>
+        </div>
+
+    </div>
+
+</body>
+
+ <script src="conversor.js"></script>
+
+</html>
